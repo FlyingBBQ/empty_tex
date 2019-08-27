@@ -1,0 +1,44 @@
+\title{Simple Latex Template}
+\author{
+        The Author \\
+        \normalsize{Additional information goes here} \\
+        \normalsize{And here}
+            %\and
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+\usepackage{url}
+%\usepackage{graphicx}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This is the paper's abstract \ldots
+\end{abstract}
+
+%\tableofcontents
+%\newpage
+
+\section{Introduction}
+Introduction goes here
+
+\paragraph{Outline}
+The remainder of this article is organized as follows.
+Section~\ref{image} shows how to imclude images.
+
+\section{Image}\label{image}
+Citing is done with \cite{frombib} and figures are made like this:
+
+\begin{figure}[h]
+    \centering
+    %\includegraphics[width=\textwidth]{figures/example.png}
+    %\caption{how2caption}
+    \label{fig:example}
+\end{figure}
+
+\bibliographystyle{unsrt}
+\bibliography{main}
+
+\end{document}

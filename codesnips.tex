@@ -1,0 +1,37 @@
+% Include this "library" for easy code snips with \begin{snip}
+
+% packages
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+% Colors
+\definecolor{bg}{HTML}{1D2021}
+\definecolor{fg}{HTML}{EBDBB2}
+\definecolor{codeorange}{HTML}{FE8019}
+\definecolor{codegray}{HTML}{928374}
+\definecolor{codered}{HTML}{CC241D}
+
+% \begin{snip}[language]
+\lstnewenvironment{snip}[1][]
+{%
+    \mdframed[backgroundcolor=bg, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=5,innerbottommargin=5, outerlinewidth=1, linecolor=bg]
+    \lstset{
+        language=#1,
+        commentstyle=\color{codegray},
+        keywordstyle=\bfseries\color{codeorange},
+        numberstyle=\tiny\color{codegray},
+        stringstyle=\color{codered},
+        basicstyle=\footnotesize\ttfamily\color{fg},
+        breakatwhitespace=false,
+        breaklines=true,
+        captionpos=b,
+        keepspaces=true,
+        numbersep=5pt,
+        showspaces=false,
+        showstringspaces=false,
+        showtabs=false,
+        tabsize=2
+    }%
+}
+{\endmdframed}
